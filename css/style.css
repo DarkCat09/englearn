@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+body {
+	padding: 0;
+	margin: 0;
+	top: 0;
+	left: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.menu {
+	padding: 0;
+	margin: 0;
+	top: 0;
+	left: 0;
+	background-color: #2a9f9f;
+}
+
+ul.top-menu {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+ul.top-menu > li {
+	display: inline-block;
+	position: relative;
+	padding-top: 0.2em;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	padding-bottom: 0.2em;
+	font-size: 1.35rem;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
+	background-color: #2a9f9f;
+	transition: background-color 0.3s ease-out 0s;
+}
+
+ul.top-menu > li:hover {
+	background-color: #7ec7c7;
+	transition: background-color 0.3s ease-out 0s;
+}
+
+ul.top-menu > li > a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.msg {
+	background-color: #fce4c1;
+}
+
+.msg.vertical {
+	margin-top: 5px;
+}
+
+.msg.vertical:before {
+	content: ""; 
+	border: solid transparent;
+	position: absolute;    
+	left: 8px;    
+	bottom: 100%;
+	border-bottom-color: #fce4c1;
+	border-width: 9px;
+	margin-left: 0;
+}
+
+.msg.horizontal {
+	/**/
+}
+
+.msg.horizontal:before {
+	content: ""; 
+	border: solid transparent;
+	position: absolute;  
+	right: 100%;
+	top: 8px;
+	border-right-color: #fce4c1;
+	border-width: 9px;
+	margin-top: -1px;
+}
+
+.account-info.msg {
+	position: absolute;
+	display: none;
+	left: 0px;
+}
+
+.account-item:hover .account-info.msg {
+	display: block;
+}
+
+ul.login-links-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 2px;
+}
+
+.main-page-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.irrverbs-cards {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+.card {
+	margin: 10px;
+	padding: 10px;
+	border-radius: 10px;
+	box-shadow: 0 0 15px #000;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	flex-grow: 1;
+}
+
+.round-button {
+	color: #fff;
+	background-color: #7ec7c7;
+	text-decoration: none;
+	font-size: 1.3rem;
+	font-family: 'Montserrat', sans-serif;
+	border-radius: 1.5rem;
+	padding: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-top: 10px;
+	cursor: pointer;
+	transition: background-color 0.3s ease-out 0s;
+}
+.round-button:hover {
+	background-color: #2a9f9f;
+}
+input[type=submit].round-button,
+input[type=button].round-button {
+	border: none;
+	outline: none;
+	outline-offset: none;
+}
+
+.small-card-caption {
+	font-size: 1.2rem;
+	font-weight: 500;
+}
+
+.card > form {
+	padding-top: 10px;
+	text-align: center;
+}
+
+.card > .small-card-heading {
+	text-align: center;
+}
+
+input[type=text],
+input[type=password],
+input[type=number],
+select {
+	border-radius: 1.2rem;
+	font-size: 1rem;
+	outline: none;
+	outline-offset: none;
+	padding: 5px;
+	font-family: 'Consolas';
+	margin-top: 10px;
+}
+input[type=text],
+input[type=password],
+select {
+	width: auto;
+}
+
+ul.see-also-list {
+	list-style: none;
+}
+
+ul.see-also-list>li {
+	padding: 5px;
+}
+
+a.link {
+	color: #2a9f9f;
+	font-size: 1rem;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	text-decoration: underline;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+input[type=number] {
+	-moz-appearance: textfield;
+}
+
+.dialog-bg {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.7);
+	position: fixed;
+	z-index: 998;
+	display: none;
+	pointer-events: none;
+}
+
+.dialog-bg:target {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	pointer-events: auto;
+}
+
+.dialog {
+	text-align: center;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 0 15px #000;
+	max-width: 40%;
+	z-index: 999;
+	padding: 15px;
+}
+
+.close > a {
+	text-decoration: none !important;
+	float: right;
+}
+
+.user-info-wrapper {
+	display: flex;
+	flex-direction: row;
+}
+
+.user-info-item-wrapper {
+	padding: 10px;
+}
+
+.user-info-name {
+	font-size: 1rem;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.user-info-descr {
+	font-size: 0.7rem;
+	font-family: 'Montserrat', sans-serif;
+}
+
+input.grade-field {
+	width: 5.5em;
+}
+
+.ex-field {
+	width: 6em !important;
+}
+
+#ee-beta {
+	cursor: pointer;
+}
+
+h1#exercise-caption-wrapper {
+	overflow: hidden;
+	text-align: center;
+	font-size: 2em;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+}
+
+span#exercise-caption {
+	position: relative;
+	display: inline-block;
+	opacity: 0;
+	transform: translateX(100%);
+	animation: caption-slide 1.2s ease-out 0s 1 normal forwards;
+}
+
+@keyframes caption-slide {
+	0% { opacity: 0; transform: translateX(100%); }
+	100% { opacity: 1; transform: translateX(0%); }
+}
+
+@keyframes ex-button-correct {
+	67% { background-color: #32a852; }
+	100% { background-color: #2a9f9f; }
+}
+
+@keyframes ex-button-incorrect {
+	67% { background-color: #bf2f2a; }
+	100% { background-color: #2a9f9f; }
+}
+
+@keyframes ex-button-partially {
+	67% { background-color: #f5cc45; }
+	100% { background-color: #2a9f9f; }
+}
